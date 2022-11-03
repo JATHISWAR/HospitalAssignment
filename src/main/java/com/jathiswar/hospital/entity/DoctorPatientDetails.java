@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "doctorpatientdetails")
@@ -34,5 +36,11 @@ public class DoctorPatientDetails {
 
     @Column(name = "reason")
     private String reason;
+
+    @OneToOne
+    @JoinColumn(name = "patient_aadhar_no",insertable = false,updatable = false)
+    private DoctorPatientDetails patientPayment;
+
+
 
 }

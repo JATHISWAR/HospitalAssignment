@@ -45,4 +45,6 @@ public class Person {
     @OneToMany(mappedBy = "patient",cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<DoctorPatientDetails> patientDetails = new HashSet<>();
 
+
+
 }
