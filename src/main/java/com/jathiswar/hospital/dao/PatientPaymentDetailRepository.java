@@ -1,10 +1,8 @@
 package com.jathiswar.hospital.dao;
 
-import com.jathiswar.hospital.BaseEntity;
-import com.jathiswar.hospital.BaseRepository;
+
 import com.jathiswar.hospital.entity.PatientPaymentDetail;
-import org.hibernate.type.IdentifierType;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-
-public interface PatientPaymentDetailRepository extends BaseRepository<BaseEntity, IdentifierType> {
+public interface PatientPaymentDetailRepository extends JpaRepository<PatientPaymentDetail,Integer> {
 }

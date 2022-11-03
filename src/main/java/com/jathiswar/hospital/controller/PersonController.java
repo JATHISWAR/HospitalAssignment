@@ -1,6 +1,5 @@
 package com.jathiswar.hospital.controller;
 
-import com.jathiswar.hospital.BaseController;
 import com.jathiswar.hospital.dao.PersonRepository;
 import com.jathiswar.hospital.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
-public class PersonController extends BaseController {
+public class PersonController {
     @Autowired
     private PersonRepository personrepo;
 

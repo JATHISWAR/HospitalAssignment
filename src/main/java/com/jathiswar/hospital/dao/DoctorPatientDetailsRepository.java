@@ -1,7 +1,7 @@
 package com.jathiswar.hospital.dao;
 
-import com.jathiswar.hospital.BaseRepository;
 import com.jathiswar.hospital.entity.DoctorPatientDetails;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface DoctorPatientDetailsRepository extends BaseRepository<DoctorPatientDetails,Integer> {
+public interface DoctorPatientDetailsRepository extends JpaRepository<DoctorPatientDetails, Integer> {
 }

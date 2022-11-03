@@ -6,19 +6,18 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "doctorpatientdetails")
+@Table(name = "doctorpatientdetails",uniqueConstraints = {@UniqueConstraint(columnNames = {"doctor_aadhar_no"})})
 @Data
 public class DoctorPatientDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "doctoraadharNo")
-    private int doctoraadharNo;
+    @Column(name = "doctor_aadhar_no")
+    private long doctorAadharNo;
 
-    @Column(name = "patientaadharNo")
-    private int patientaadharNo;
+    @Column(name = "patient_aadhar_no")
+    private long patientAadharNo;
 
     @Column(name = "reason")
-    private int appointmentno;
+    private String reason;
 
 }
