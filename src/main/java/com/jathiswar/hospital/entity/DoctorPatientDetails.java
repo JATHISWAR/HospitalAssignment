@@ -1,13 +1,18 @@
 package com.jathiswar.hospital.entity;
 
 
-import lombok.Data;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "doctorpatientdetails",uniqueConstraints = {@UniqueConstraint(columnNames = {"doctor_aadhar_no"})})
-@Data
+@Table(name = "doctorpatientdetails")
+@Getter
+@Setter
+@IdClass(DoctorPatientID.class)
 public class DoctorPatientDetails {
 
     @Id
@@ -16,6 +21,16 @@ public class DoctorPatientDetails {
 
     @Column(name = "patient_aadhar_no")
     private long patientAadharNo;
+
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "doctor_aadhar_no",insertable = false,updatable = false)
+    private Person doctor;
+
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "patient_aadhar_no",insertable = false,updatable = false)
+    private Person patient;
 
     @Column(name = "reason")
     private String reason;

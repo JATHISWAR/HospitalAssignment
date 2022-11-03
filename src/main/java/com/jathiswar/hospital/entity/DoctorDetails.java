@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "doctordetails",uniqueConstraints = {@UniqueConstraint(columnNames = {"aadhar_no"})})
+@Table(name = "doctordetails")
 @Data
 public class DoctorDetails {
 

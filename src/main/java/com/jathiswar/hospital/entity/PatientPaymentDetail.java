@@ -12,15 +12,14 @@ import java.sql.Date;
 public class PatientPaymentDetail {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "patientaadharNo")
-    private int patientaadharNo;
+    @Column(name = "patient_aadhar_no")
+    private long patientAadharNo;
 
-    @Column(name="creditcardNo")
-    private int creditcardno;
+    @Column(name="credit_card_no")
+    private long creditCardNo;
 
-    @Column(name = "validtill")
-    private Date validtill;
+    @Column(name = "valid_till")
+    private Date validTill;
 
 
 }
