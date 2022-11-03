@@ -28,6 +28,7 @@ public class DoctorAppointment {
     @Column(name = "from_time")
     private Time fromTime;
 
+
     @Column(name = "status")
     private String status;
 
